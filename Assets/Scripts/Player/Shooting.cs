@@ -1,46 +1,109 @@
-// Shooting.cs - hitscan weapon using a raycast from the camera through the crosshair
+using System.Collections;
+using System.Collections.Generic;
+using InventoryFramework;
 using UnityEngine;
 
 public class Shooting : MonoBehaviour
 {
-    public float damage = 20f;
-    public float range = 50f;
-    public float fireRate = 4f;          // shots per second
-    public LayerMask hitMask = ~0;       // everything by default
+    public Camera cam;                  // FirstPersonCamera
+    public HotbarUI hotbarUI;           // auto-found if left empty
+    public LayerMask hitMask = ~0;
+
+    public KeyCode reloadKey = KeyCode.R;
+    public bool autoReload = true;
+
+    // Current ammo is stored here, not on the item asset, so restarts reset it
+    readonly Dictionary<WeaponItem, int> ammo = new();
+    readonly Dictionary<WeaponItem, int> reserve = new();
+
+    WeaponItem current;
     float nextFire;
+    bool reloading;
+    Coroutine reloadRoutine;
 
-    public Camera cam;   // drag FirstPersonCamera here, or leave empty to auto-find
+    public WeaponItem Current => current;
+    public bool Reloading => reloading;
+    public int CurrentAmmo => current != null && ammo.TryGetValue(current, out var a) ? a : 0;
+    public int Reserve => current != null && reserve.TryGetValue(current, out var r) ? r : 0;
 
-    void Start()
+    void Awake()
     {
         if (cam == null) cam = GetComponentInChildren<Camera>();
+        if (hotbarUI == null) hotbarUI = FindFirstObjectByType<HotbarUI>();
     }
 
     void Update()
     {
-        if (Cursor.lockState != CursorLockMode.Locked) return; // no shooting after death
-        if (Input.GetButton("Fire1") && Time.time >= nextFire)
+        if (Cursor.lockState != CursorLockMode.Locked) return;
+
+        var weapon = hotbarUI != null ? hotbarUI.SelectedItem as WeaponItem : null;
+        if (weapon != current) SwitchTo(weapon);
+        if (current == null) return;
+
+        if (Input.GetKeyDown(reloadKey)) TryReload();
+
+        bool wantsFire = current.automatic ? Input.GetButton("Fire1")
+                                           : Input.GetButtonDown("Fire1");
+        if (wantsFire) TryFire();
+    }
+
+    void SwitchTo(WeaponItem w)
+    {
+        if (reloadRoutine != null) StopCoroutine(reloadRoutine);
+        reloading = false;
+        current = w;
+        if (w == null) return;
+        if (!ammo.ContainsKey(w)) { ammo[w] = w.magSize; reserve[w] = w.reserveAmmo; }
+    }
+
+    void TryFire()
+    {
+        if (reloading || Time.time < nextFire) return;
+        if (CurrentAmmo <= 0) { TryReload(); return; }
+
+        nextFire = Time.time + 1f / current.fireRate;
+        ammo[current]--;
+
+        if (autoReload && ammo[current] <= 0) StartCoroutine(AutoReloadAfterShot());
+
+        var ray = new Ray(cam.transform.position, cam.transform.forward);
+        if (Physics.Raycast(ray, out var hit, current.range, hitMask, QueryTriggerInteraction.Ignore))
         {
-            nextFire = Time.time + 1f / fireRate;
-            Shoot();
+            var h = hit.collider.GetComponentInParent<Health>();
+            if (h != null && !h.CompareTag("Player") && !h.IsDead)
+            {
+                h.TakeDamage(current.damage);
+                if (Crosshair.Instance != null) Crosshair.Instance.Hit();
+            }
         }
     }
 
-    void Shoot()
+    void TryReload()
     {
-     
-        Ray ray = new Ray(cam.transform.position, cam.transform.forward);
-        if (Physics.Raycast(ray, out RaycastHit hit, range, hitMask, QueryTriggerInteraction.Ignore))
+        if (reloading || current == null) return;
+        if (CurrentAmmo >= current.magSize) return;
+        if (!current.unlimitedReserve && Reserve <= 0) return;
+        reloadRoutine = StartCoroutine(Reload(current));
+    }
+
+    IEnumerator Reload(WeaponItem w)
+    {
+        reloading = true;
+        yield return new WaitForSeconds(w.reloadTime);
+
+        if (w.unlimitedReserve) ammo[w] = w.magSize;
+        else
         {
-            Debug.Log("Shot hit: " + hit.collider.name + " (distance " + hit.distance.ToString("F1") + ")");
-            Health h = hit.collider.GetComponentInParent<Health>();
-            if (h != null && !h.CompareTag("Player"))
-            {
-                h.TakeDamage(damage);
-                if (Crosshair.Instance != null) Crosshair.Instance.Hit();
-            }
-            Debug.DrawLine(ray.origin, hit.point, Color.red, 0.5f);
+            int take = Mathf.Min(w.magSize - ammo[w], reserve[w]);
+            ammo[w] += take;
+            reserve[w] -= take;
         }
-        else Debug.Log("Shot hit nothing");
+        reloading = false;
+    }
+
+    IEnumerator AutoReloadAfterShot()
+    {
+        yield return null;      // let this shot finish first
+        TryReload();
     }
 }

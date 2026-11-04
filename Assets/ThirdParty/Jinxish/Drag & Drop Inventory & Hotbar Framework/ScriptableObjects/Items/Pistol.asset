@@ -1,0 +1,28 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5931247a60b6b40985a940f012391f, type: 3}
+  m_Name: Pistol
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
+  id: 4
+  itemName: Pistol
+  description: a weapon  to start with
+  icon: {fileID: 21300000, guid: 3dca08c326cdf8d4bbf1c1ab5031eab2, type: 3}
+  maxStack: 1
+  model: {fileID: 3026621001849516807, guid: 8d48f827fe411754eaa10bafe2de95cd, type: 3}
+  damage: 10
+  fireRate: 3
+  range: 25
+  automatic: 0
+  magSize: 12
+  unlimitedReserve: 1
+  reserveAmmo: 90
+  reloadTime: 1.2

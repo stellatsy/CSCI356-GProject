@@ -91,6 +91,9 @@ namespace InventoryFramework
             var s = GetSlot();
             if (s.IsEmpty) return;
 
+            // OnBeginDrag, right after: if (s.IsEmpty) return;
+            if (LootInventory.Instance != null && LootInventory.Instance.IsLocked(s.item)) return;
+
             // How Many To Drag
             int amount;
 
@@ -139,6 +142,10 @@ namespace InventoryFramework
         public void OnDrag(PointerEventData eventData)
         {
             if (dragIcon == null) return;
+
+            // OnDrop, right after the first line: if (DragContext.draggedItem == null ...) return;
+            if (owner == SlotOwner.Hotbar && index == 0 &&
+                LootInventory.Instance != null && LootInventory.Instance.IsLocked(GetSlot().item)) return;
 
             UpdateDragPosition(eventData);
         }

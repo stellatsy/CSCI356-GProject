@@ -16,6 +16,17 @@ namespace InventoryFramework
         private List<InventorySlotUI> slotUIs = new();
         private int selectedIndex = 0;
 
+        public int SelectedIndex => selectedIndex;
+
+        public Item SelectedItem
+        {
+            get
+            {
+                var s = hotbar.slots[selectedIndex];
+                return (s == null || s.IsEmpty) ? null : s.item;
+            }
+        }
+
         public RectTransform dragLayer;
         public Canvas rootCanvas;
 
