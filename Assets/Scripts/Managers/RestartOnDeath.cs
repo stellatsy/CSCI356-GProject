@@ -24,6 +24,10 @@ public class RestartOnDeath : MonoBehaviour
                 deathScreen.alpha = Mathf.Clamp01(t / (delay * 0.5f));   // fade in over the first half
             yield return null;
         }
+        #if UNITY_EDITOR
+        UnityEditor.Selection.activeObject = null;   // avoids Inspector errors when the scene unloads
+        #endif
+
         Time.timeScale = 1f;
         SceneManager.LoadScene(SceneManager.GetActiveScene().name);
     }

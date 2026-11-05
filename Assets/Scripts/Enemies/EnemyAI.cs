@@ -12,7 +12,11 @@ public class EnemyAI : MonoBehaviour
     public float attackRange = 1.8f;
     public float damage = 10f;
     public float attackCooldown = 1.2f;
+    public float hitDelay = 0.5f;        // seconds into the swing when the hit lands
+    public float corpseTime = 4f;        // how long the body stays before it is removed
     public State current = State.Idle;
+
+    public bool useAnimationEvent = true;
 
     EnemyMovement movement;
     Animator animator;
@@ -20,6 +24,8 @@ public class EnemyAI : MonoBehaviour
     Health playerHealth;
     Transform player;
     float nextAttackTime;
+
+    float lastHitTime = -10f;
 
     void Start()
     {
@@ -55,9 +61,25 @@ public class EnemyAI : MonoBehaviour
                 {
                     nextAttackTime = Time.time + attackCooldown;
                     Trigger("Attack");
-                    if (playerHealth != null) playerHealth.TakeDamage(damage);
+                    if (!useAnimationEvent) Invoke(nameof(DealDamage), hitDelay);
                 }
                 break;
+        }
+    }
+
+    // Called partway through the attack animation.
+    public void DealDamage()
+    {
+        if (current == State.Dead || playerHealth == null || playerHealth.IsDead) return;
+        if (Time.time - lastHitTime < attackCooldown * 0.5f) return;   // one hit per swing
+        lastHitTime = Time.time;
+
+        float d = Vector3.Distance(transform.position, player.position);
+        if (d <= attackRange + 0.5f)
+        {
+            
+            playerHealth.TakeDamage(damage);
+            
         }
     }
 
@@ -67,10 +89,18 @@ public class EnemyAI : MonoBehaviour
         if (next != State.Chase) movement.Stop();
         if (next == State.Dead)
         {
+            CancelInvoke(nameof(DealDamage));
+            foreach (var c in GetComponentsInChildren<Collider>()) c.enabled = false;   // bullets and player pass through the corpse
             Trigger("Die");
-            Destroy(gameObject, 3f); // chest drop will spawn here later
+            Invoke(nameof(RemoveCorpse), corpseTime);
         }
     }
+
+    void RemoveCorpse()
+    {
+        gameObject.SetActive(false);   // hide instead of Destroy, so the Inspector never loses it
+    }
+
 
     void Trigger(string triggerName) // ignores animator triggers that don't exist yet
     {

@@ -5667,9 +5667,17 @@ PrefabInstance:
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
       objectReference: {fileID: 0}
+    - target: {fileID: 315741877340396981, guid: 7dd7a0077c8be4246805e1f80cadce18, type: 3}
+      propertyPath: useAnimationEvent
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 862964658518284077, guid: 7dd7a0077c8be4246805e1f80cadce18, type: 3}
       propertyPath: m_Name
       value: Monster_Stage1_01
+      objectReference: {fileID: 0}
+    - target: {fileID: 6220071079369463789, guid: 7dd7a0077c8be4246805e1f80cadce18, type: 3}
+      propertyPath: m_CullingMode
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []

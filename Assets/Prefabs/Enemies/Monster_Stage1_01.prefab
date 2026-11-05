@@ -460,8 +460,11 @@ MonoBehaviour:
   detectRange: 12
   attackRange: 1.8
   damage: 10
-  attackCooldown: 1.2
+  attackCooldown: 2.9
+  hitDelay: 1.17
+  corpseTime: 4
   current: 0
+  useAnimationEvent: 1
 --- !u!136 &1791506962819491150
 CapsuleCollider:
   m_ObjectHideFlags: 0
