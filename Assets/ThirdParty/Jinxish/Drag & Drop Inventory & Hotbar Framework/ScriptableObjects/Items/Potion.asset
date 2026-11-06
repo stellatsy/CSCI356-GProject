@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   id: 3
   itemName: Potion
-  description: A potion that heals you
+  description: Restores 25 HP. Left-click to drink.
   icon: {fileID: 21300000, guid: 19c036ead2e6e7643b551d01551059f7, type: 3}
-  maxStack: 16
-  model: {fileID: 6089524035156570816, guid: 839b25543bc3be549beee147400b6165, type: 3}
+  maxStack: 10
+  model: {fileID: 4688165426312164473, guid: 52b7de2574884be41838a5ded3894923, type: 3}

@@ -14,7 +14,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
   id: 4
   itemName: Pistol
-  description: a weapon  to start with
+  description: 'Standard sidearm. Damage: 10 Magazine: 12 (unlimited reserve) Fire
+    rate: semi-auto'
   icon: {fileID: 21300000, guid: 3dca08c326cdf8d4bbf1c1ab5031eab2, type: 3}
   maxStack: 1
   model: {fileID: 3026621001849516807, guid: 8d48f827fe411754eaa10bafe2de95cd, type: 3}

@@ -501,7 +501,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReward
   scoreValue: 100
   scoreType: 0
-  chestPrefab: {fileID: 0}
+  chestPrefab: {fileID: 1048005622780765946, guid: 8888b607da6a15745beb9ae3eb230e62, type: 3}
+  chestDelay: 1.5
 --- !u!4 &708816563350339125 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 686d81013c43a144f9167e4b264c7187, type: 3}

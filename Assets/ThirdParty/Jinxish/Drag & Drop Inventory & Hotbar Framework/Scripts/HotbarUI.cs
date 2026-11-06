@@ -27,6 +27,15 @@ namespace InventoryFramework
             }
         }
 
+        public void ConsumeSelected()
+        {
+            var s = hotbar.slots[selectedIndex];
+            if (s == null || s.IsEmpty) return;
+            s.count--;
+            if (s.count <= 0) { s.item = null; s.count = 0; }
+            RefreshUI();
+        }
+
         public RectTransform dragLayer;
         public Canvas rootCanvas;
 

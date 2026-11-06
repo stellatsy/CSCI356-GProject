@@ -21,12 +21,15 @@ public class Health : MonoBehaviour
         if (IsDead) OnDied?.Invoke();
     }
 
-    public void Heal(float amount)
+    public bool Heal(float amount)
     {
-        if (IsDead) return;
+        if (IsDead || current >= maxHealth) return false;   // nothing to heal
         current = Mathf.Min(maxHealth, current + amount);
-        OnChanged?.Invoke(current, maxHealth);
+        OnChanged?.Invoke(current, maxHealth);               // updates the health bar
+        return true;
     }
+
+    
 
     [ContextMenu("Take 10 Damage")]
     void TestDamage() { TakeDamage(10f); }

@@ -17,6 +17,8 @@ public class GameManager : MonoBehaviour
     public bool BossKilled;
     public int KillScore, EliteScore, StageScore, BossScore;
 
+    public bool smgGiven;      // the first chest gives the SMG, once per run
+
     public event Action OnChanged;
 
     void Awake() { Instance = this; }
