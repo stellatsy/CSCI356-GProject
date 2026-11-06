@@ -12,7 +12,7 @@ public class Crosshair : MonoBehaviour
     float timer;
 
     void Awake() { Instance = this; }
-    public void Hit() { timer = flashTime; }
+    public void Hit() { timer = flashTime;}
 
     void Update()
     {

@@ -1,0 +1,29 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2e5931247a60b6b40985a940f012391f, type: 3}
+  m_Name: SMG
+  m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
+  id: 5
+  itemName: SMG
+  description: 'Fast-firing close-range weapon. Damage: Lv1 8 / Lv2 10 / Lv3 12 Collect
+    3 copies to upgrade, then press U.'
+  icon: {fileID: 21300000, guid: c2f3b60a3f020404f9b37c4c7a07be2e, type: 3}
+  maxStack: 1
+  model: {fileID: 2799674369727880325, guid: c35105a0e64be4142827ec3e83bcf499, type: 3}
+  damage: 8
+  fireRate: 10
+  range: 35
+  automatic: 1
+  magSize: 30
+  unlimitedReserve: 0
+  reserveAmmo: 90
+  reloadTime: 1.5

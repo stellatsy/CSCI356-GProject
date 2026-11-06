@@ -118,9 +118,13 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ChestLoot
   lootPool:
+  - {fileID: 11400000, guid: 3f552243211a56543b87eb4fb72b54ae, type: 2}
+  - {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
   - {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
   itemCount: 1
-  guaranteedFirst: {fileID: 0}
+  guaranteedFirst: {fileID: 11400000, guid: 3f552243211a56543b87eb4fb72b54ae, type: 2}
   openParameter: Open
   interactRange: 2.5
   giveDelay: 0.8
+  disappearAfter: 3
+  shrinkTime: 0.5

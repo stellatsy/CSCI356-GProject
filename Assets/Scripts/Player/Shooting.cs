@@ -72,7 +72,7 @@ public class Shooting : MonoBehaviour
             var h = hit.collider.GetComponentInParent<Health>();
             if (h != null && !h.CompareTag("Player") && !h.IsDead)
             {
-                h.TakeDamage(current.damage);
+                h.TakeDamage(WeaponProgress.Instance != null ? WeaponProgress.Instance.Damage(current) : current.damage);
                 if (Crosshair.Instance != null) Crosshair.Instance.Hit();
             }
         }

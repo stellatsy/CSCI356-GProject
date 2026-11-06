@@ -60,13 +60,13 @@ public class ChestLoot : MonoBehaviour
         if (gm != null && !gm.smgGiven && guaranteedFirst != null)
         {
             gm.smgGiven = true;
-            LootInventory.Instance.Give(guaranteedFirst, 1, true);
+            WeaponProgress.Instance.Give(guaranteedFirst);
             gaveFirst = true;
         }
 
         int remaining = gaveFirst ? itemCount - 1 : itemCount;
         for (int i = 0; i < remaining && lootPool.Length > 0; i++)
-            LootInventory.Instance.Give(lootPool[Random.Range(0, lootPool.Length)], 1, true);
+            WeaponProgress.Instance.Give(lootPool[Random.Range(0, lootPool.Length)]);
 
         // the chest stays open for a while, then shrinks away
         yield return new WaitForSeconds(disappearAfter);
