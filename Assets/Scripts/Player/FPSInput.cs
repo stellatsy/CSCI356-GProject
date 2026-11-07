@@ -1,15 +1,29 @@
 using UnityEngine;
+using UnityEngine.InputSystem;
 
 [RequireComponent(typeof(CharacterController))]
 public class FPSInput : MonoBehaviour
 {
     public float speed = 6.0f;
     private float verticalVelocity = -2f;
+
+    [Header("Jump Settings")]
+    public float jumpHeight = 1.0f;
+    public float gravity = -20f;
+
     private CharacterController charController;
 
     void Start()
     {
         charController = GetComponent<CharacterController>();
+    }
+
+    void OnJump(InputValue value)
+    {
+        if (value.isPressed && charController.isGrounded)
+        {
+            verticalVelocity = Mathf.Sqrt(jumpHeight * -2f * gravity);
+        }
     }
 
     void Update()
@@ -22,6 +36,13 @@ public class FPSInput : MonoBehaviour
 
         movement = transform.TransformDirection(movement);
         movement.y = verticalVelocity;
+
+        if (charController.isGrounded && verticalVelocity < 0)
+        {
+            verticalVelocity = -2f;
+        }
+
+        verticalVelocity += gravity * Time.deltaTime;
 
         charController.Move(movement * Time.deltaTime);
     }
