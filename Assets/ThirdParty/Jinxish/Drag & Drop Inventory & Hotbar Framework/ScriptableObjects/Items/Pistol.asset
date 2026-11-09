@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
   id: 4
   itemName: Pistol
-  description: 'Standard sidearm. Damage: 10 Magazine: 12 (unlimited reserve) Fire
-    rate: semi-auto'
+  description: 'Standard sidearm. Fire rate: semi-auto'
   icon: {fileID: 21300000, guid: 3dca08c326cdf8d4bbf1c1ab5031eab2, type: 3}
   maxStack: 1
   model: {fileID: 3026621001849516807, guid: 8d48f827fe411754eaa10bafe2de95cd, type: 3}
@@ -27,3 +26,6 @@ MonoBehaviour:
   unlimitedReserve: 1
   reserveAmmo: 90
   reloadTime: 1.2
+  shotClip: {fileID: 8300000, guid: 2390a1a3fd642db4898dbf422470d9eb, type: 3}
+  reloadClip: {fileID: 8300000, guid: 6235abe7cb11729498cc9ee8f63a06d7, type: 3}
+  emptyClip: {fileID: 8300000, guid: 4158f5b5f911a514282ad4d69f1983f7, type: 3}

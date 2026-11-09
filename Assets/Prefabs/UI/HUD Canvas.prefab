@@ -38,7 +38,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0.5}
   m_AnchorMax: {x: 0, y: 0.5}
   m_AnchoredPosition: {x: 10, y: 0}
-  m_SizeDelta: {x: 230, y: 230}
+  m_SizeDelta: {x: 230, y: 240}
   m_Pivot: {x: 0, y: 0.5}
 --- !u!222 &5030194968376541956
 CanvasRenderer:
@@ -1166,17 +1166,19 @@ MonoBehaviour:
 
     Mouse  Look
 
-    Left Click  Shoot
-    / Drink
+    Space  Jump
+
+    Left
+    Click  Shoot / Drink
 
     R  Reload
 
     1-5 / Scroll  Select item
 
-    E  Open chest
+    E  Open
+    chest
 
-    Tab 
-    Backpack
+    Tab  Backpack
 
     U  Upgrade weapon
 

@@ -14,8 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
   id: 5
   itemName: SMG
-  description: 'Fast-firing close-range weapon. Damage: Lv1 8 / Lv2 10 / Lv3 12 Collect
-    3 copies to upgrade, then press U.'
+  description: 'Fast-firing close-range weapon. '
   icon: {fileID: 21300000, guid: c2f3b60a3f020404f9b37c4c7a07be2e, type: 3}
   maxStack: 1
   model: {fileID: 2799674369727880325, guid: c35105a0e64be4142827ec3e83bcf499, type: 3}
@@ -27,3 +26,7 @@ MonoBehaviour:
   unlimitedReserve: 0
   reserveAmmo: 90
   reloadTime: 1.5
+  shotClip: {fileID: 8300000, guid: fd2e202be5d4c9443a20c2d868f5275b, type: 3}
+  reloadClip: {fileID: 8300000, guid: 6235abe7cb11729498cc9ee8f63a06d7, type: 3}
+  emptyClip: {fileID: 8300000, guid: 4158f5b5f911a514282ad4d69f1983f7, type: 3}
+  shotVolume: 0.3

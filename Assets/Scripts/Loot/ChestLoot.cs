@@ -46,6 +46,7 @@ public class ChestLoot : MonoBehaviour
     IEnumerator Open()
     {
         opened = true;
+        AudioManager.Chest();
         Unopened.Remove(this);
         InteractPrompt.Hide(this);
 
@@ -57,6 +58,7 @@ public class ChestLoot : MonoBehaviour
 
         var gm = GameManager.Instance;
         bool gaveFirst = false;
+        
         if (gm != null && !gm.smgGiven && guaranteedFirst != null)
         {
             gm.smgGiven = true;
@@ -66,12 +68,31 @@ public class ChestLoot : MonoBehaviour
 
         int remaining = gaveFirst ? itemCount - 1 : itemCount;
         for (int i = 0; i < remaining && lootPool.Length > 0; i++)
-            WeaponProgress.Instance.Give(lootPool[Random.Range(0, lootPool.Length)]);
+        {
+            var drop = PickLoot();
+            if (drop != null) WeaponProgress.Instance.Give(drop);
+        }
 
         // the chest stays open for a while, then shrinks away
         yield return new WaitForSeconds(disappearAfter);
         yield return Shrink();
         gameObject.SetActive(false);
+    }
+
+    // Picks a random item, skipping weapons already at max level
+    Item PickLoot()
+    {
+        var wp = WeaponProgress.Instance;
+        for (int tries = 0; tries < 10; tries++)
+        {
+            var item = lootPool[Random.Range(0, lootPool.Length)];
+            if (item is WeaponItem w && wp != null && wp.IsMaxed(w)) continue;
+            return item;
+        }
+        // everything rolled was a maxed weapon: fall back to the first non-weapon item
+        foreach (var item in lootPool)
+            if (!(item is WeaponItem)) return item;
+        return null;
     }
 
     IEnumerator Shrink()

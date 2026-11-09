@@ -183,6 +183,9 @@ GameObject:
   - component: {fileID: 5372236731539281165}
   - component: {fileID: 7760088361853947672}
   - component: {fileID: 4977310352654047113}
+  - component: {fileID: 8504440930307392888}
+  - component: {fileID: 8719282946079577466}
+  - component: {fileID: 5860047077804701331}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -244,6 +247,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::FPSInput
   speed: 6
+  jumpHeight: 1
+  gravity: -20
 --- !u!114 &5372236731539281165
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -282,13 +287,74 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 661c6d3a87c225c4aa08b33e34dff31b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Shooting
-  damage: 20
-  range: 50
-  fireRate: 4
+  cam: {fileID: 9001847314945338792}
+  hotbarUI: {fileID: 0}
   hitMask:
     serializedVersion: 2
     m_Bits: 4294967295
-  cam: {fileID: 9001847314945338792}
+  reloadKey: 114
+  autoReload: 1
+--- !u!114 &8504440930307392888
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288314725888549635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6cee48abedd27f748ad8dbe1871a4c02, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionUse
+  potionItem: {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
+  healAmount: 25
+  cooldown: 1
+  hotbarUI: {fileID: 0}
+--- !u!114 &8719282946079577466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288314725888549635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
+  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
+  m_NotificationBehavior: 0
+  m_UIInputModule: {fileID: 0}
+  m_DeviceLostEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_DeviceRegainedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ControlsChangedEvent:
+    m_PersistentCalls:
+      m_Calls: []
+  m_ActionEvents: []
+  m_NeverAutoSwitchControlSchemes: 0
+  m_DefaultControlScheme: 
+  m_DefaultActionMap: Player
+  m_SplitScreenIndex: -1
+  m_Camera: {fileID: 0}
+--- !u!114 &5860047077804701331
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1288314725888549635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f9dd45b698b8b5a4f8e1e8c268f5c883, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
+  hurtClip: {fileID: 8300000, guid: d0c26fc56096aad4d8c3cb5a04bdf183, type: 3}
+  deathClip: {fileID: 8300000, guid: f3098f87e1325ea40bab5b2853afece1, type: 3}
+  startHealth: 100
 --- !u!1 &5213195625159590333
 GameObject:
   m_ObjectHideFlags: 0

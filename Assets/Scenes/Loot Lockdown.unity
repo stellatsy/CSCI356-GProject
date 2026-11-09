@@ -1019,6 +1019,7 @@ GameObject:
   - component: {fileID: 693475407}
   - component: {fileID: 693475406}
   - component: {fileID: 693475408}
+  - component: {fileID: 693475409}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -1061,7 +1062,7 @@ MonoBehaviour:
   EliteScore: 0
   StageScore: 0
   BossScore: 0
-  smgGiven: 1
+  smgGiven: 0
 --- !u!114 &693475405
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1126,6 +1127,27 @@ MonoBehaviour:
   stageClearScore: 500
   clearHoldTime: 2.5
   nextStageDelay: 3
+--- !u!114 &693475409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693475402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371e06ebd6d516d44844e9935406e2f2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::AudioManager
+  chestOpen: {fileID: 8300000, guid: d50f9487d44b762439cb4eefa7862eca, type: 3}
+  pickup: {fileID: 8300000, guid: 60600953ed081bb40904a205898d2e59, type: 3}
+  stageClear: {fileID: 8300000, guid: 84716f177071ddd4dac824aa1ca95278, type: 3}
+  potion: {fileID: 8300000, guid: de647b792959ecb4797cd27db7c08e2d, type: 3}
+  music: {fileID: 8300000, guid: 6884e44a00cda5f4aa22ecd7b63d59e8, type: 3}
+  upgrade: {fileID: 8300000, guid: 15f63f77f4d35c74fb23d3372a45b48d, type: 3}
+  upgradeReady: {fileID: 8300000, guid: dc1e58611c293fb47abd403f58a37d56, type: 3}
+  sfxVolume: 1
+  musicVolume: 0.35
 --- !u!1001 &723565583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1134,9 +1156,61 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 1686741994}
     m_Modifications:
+    - target: {fileID: 300940452098273737, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 363524168926567939, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 417136093530290912, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1378772542166436568, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1425204276444565069, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 1631910198763423369, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 2773872124763246377, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3066433760355258614, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3389520285001096359, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3453358570928904242, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 3895057260899650315, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
       propertyPath: m_Name
       value: EA_Bld_Tomb_Niche_Clean_Class_A_01c_PRE
+      objectReference: {fileID: 0}
+    - target: {fileID: 4036056957581147631, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4037120072454563766, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4116540344068147324, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 4415169607347376561, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
       propertyPath: m_LocalScale.x
@@ -1193,6 +1267,50 @@ PrefabInstance:
     - target: {fileID: 4415169607347376561, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
       propertyPath: m_ConstrainProportionsScale
       value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4819644630347477167, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4828508426170868191, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4829549778481970054, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5876797281352977606, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6736959255492170521, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7013758630687671654, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7503798445612701416, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7550263895385150077, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9082570715572994611, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9135918731584005840, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 9163086068033599392, guid: a896abcf21f1178409b008cb5e2ff894, type: 3}
+      propertyPath: m_Shadows.m_Type
+      value: 0
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -2163,57 +2281,6 @@ Transform:
   - {fileID: 1163221084}
   m_Father: {fileID: 1784627538}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!1 &2058305249 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1288314725888549635, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
-  m_PrefabInstance: {fileID: 5744664840275050087}
-  m_PrefabAsset: {fileID: 0}
---- !u!114 &2058305256
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058305249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 6cee48abedd27f748ad8dbe1871a4c02, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::PotionUse
-  potionItem: {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
-  healAmount: 25
-  cooldown: 1
-  hotbarUI: {fileID: 0}
---- !u!114 &2058305263
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 2058305249}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 62899f850307741f2a39c98a8b639597, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Unity.InputSystem::UnityEngine.InputSystem.PlayerInput
-  m_Actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}
-  m_NotificationBehavior: 0
-  m_UIInputModule: {fileID: 0}
-  m_DeviceLostEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_DeviceRegainedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ControlsChangedEvent:
-    m_PersistentCalls:
-      m_Calls: []
-  m_ActionEvents: []
-  m_NeverAutoSwitchControlSchemes: 0
-  m_DefaultControlScheme: 
-  m_DefaultActionMap: Player
-  m_SplitScreenIndex: -1
-  m_Camera: {fileID: 0}
 --- !u!1 &2087607775
 GameObject:
   m_ObjectHideFlags: 0
@@ -2399,34 +2466,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: HUD Canvas
       objectReference: {fileID: 0}
-    - target: {fileID: 1329403817628237689, guid: 4513ef771cbd07a45b3ac6790230b161, type: 3}
-      propertyPath: m_text
-      value: '<b>CONTROLS</b>
-
-
-        WASD  Move
-
-        Mouse  Look
-
-        Space 
-        Jump
-
-        Left Click  Shoot / Drink
-
-        R  Reload
-
-        1-5 /
-        Scroll  Select item
-
-        E  Open chest
-
-        Tab  Backpack
-
-        U 
-        Upgrade weapon
-
-        H  Hide this panel'
-      objectReference: {fileID: 0}
     - target: {fileID: 1974197345648439322, guid: 4513ef771cbd07a45b3ac6790230b161, type: 3}
       propertyPath: m_AnchorMax.y
       value: 0
@@ -2572,10 +2611,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 1982513216691748407, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
-      propertyPath: jumpHeight
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6769955422951054665, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09
@@ -2619,13 +2654,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1288314725888549635, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2058305256}
-    - targetCorrespondingSourceObject: {fileID: 1288314725888549635, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 2058305263}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
 --- !u!4 &5744664840275050088 stripped
 Transform:

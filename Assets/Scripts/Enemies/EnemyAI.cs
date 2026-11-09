@@ -1,6 +1,5 @@
 // EnemyAI.cs - decision making
-// Finite state machine (Idle -> Chase -> Attack -> Dead), based on the State pattern
-// from Nystrom, Game Programming Patterns. Walking is done by EnemyMovement (Unity NavMesh).
+
 using UnityEngine;
 
 [RequireComponent(typeof(EnemyMovement), typeof(Health))]
@@ -17,6 +16,8 @@ public class EnemyAI : MonoBehaviour
     public State current = State.Idle;
 
     public bool useAnimationEvent = true;
+
+    public AudioClip attackClip, deathClip;
 
     EnemyMovement movement;
     Animator animator;
@@ -61,6 +62,7 @@ public class EnemyAI : MonoBehaviour
                 {
                     nextAttackTime = Time.time + attackCooldown;
                     Trigger("Attack");
+                    PlaySound(attackClip);
                     if (!useAnimationEvent) Invoke(nameof(DealDamage), hitDelay);
                 }
                 break;
@@ -92,6 +94,7 @@ public class EnemyAI : MonoBehaviour
             CancelInvoke(nameof(DealDamage));
             foreach (var c in GetComponentsInChildren<Collider>()) c.enabled = false;   // bullets and player pass through the corpse
             Trigger("Die");
+            PlaySound(deathClip);
             Invoke(nameof(RemoveCorpse), corpseTime);
         }
     }
@@ -107,5 +110,10 @@ public class EnemyAI : MonoBehaviour
         if (animator == null) return;
         foreach (var p in animator.parameters)
             if (p.name == triggerName) { animator.SetTrigger(triggerName); return; }
+    }
+
+    void PlaySound(AudioClip c)
+    {
+        if (c != null) AudioSource.PlayClipAtPoint(c, transform.position, 1f);
     }
 }

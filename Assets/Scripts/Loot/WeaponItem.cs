@@ -4,15 +4,14 @@ using UnityEngine;
 [CreateAssetMenu(menuName = "Loot Lockdown/Weapon Item")]
 public class WeaponItem : Item
 {
-    [Header("Level 1 stats")]
-    public float damage = 20f;
-    public float fireRate = 4f;      // shots per second
-    public float range = 50f;
-    public bool automatic = true;    // hold to fire
-
-    [Header("Ammo")]
-    public int magSize = 30;         // bullets per magazine
+    public float damage = 20f, fireRate = 4f, range = 50f;
+    public bool automatic = true;
+    public int magSize = 30;
     public bool unlimitedReserve = false;
-    public int reserveAmmo = 90;     // ignored if unlimitedReserve is on
+    public int reserveAmmo = 90;
     public float reloadTime = 1.5f;
+
+    [Header("Audio")]
+    public AudioClip shotClip, reloadClip, emptyClip;
+    [Range(0f, 1f)] public float shotVolume = 1f;
 }

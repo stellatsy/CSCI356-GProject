@@ -85,8 +85,11 @@ public class UpgradeHint : MonoBehaviour
         {
             float before = wp.Damage(held);
             if (wp.Upgrade(held))
+            {
+                AudioManager.Upgrade();
                 PickupFeed.Show(held.itemName + " upgraded to Lv " + wp.Level(held) +
                                 "!  Damage " + before.ToString("0.#") + " -> " + wp.Damage(held).ToString("0.#"));
+            }
         }
     }
 

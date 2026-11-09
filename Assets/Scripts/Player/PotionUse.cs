@@ -26,6 +26,7 @@ public class PotionUse : MonoBehaviour
 
         if (health.Heal(healAmount))      // false if already at full health
         {
+            AudioManager.Potion();
             hotbarUI.ConsumeSelected();
             nextUse = Time.time + cooldown;
         }

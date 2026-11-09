@@ -487,6 +487,8 @@ MonoBehaviour:
   corpseTime: 4
   current: 0
   useAnimationEvent: 0
+  attackClip: {fileID: 8300000, guid: f1fdb961d798cfb41964d6997dd23cb8, type: 3}
+  deathClip: {fileID: 8300000, guid: 7de94dabfbb89754b99aeb72df6d5199, type: 3}
 --- !u!114 &631799145429435948
 MonoBehaviour:
   m_ObjectHideFlags: 0

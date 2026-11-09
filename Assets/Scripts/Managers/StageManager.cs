@@ -52,6 +52,8 @@ public class StageManager : MonoBehaviour
         if (gm != null) gm.AddScore(stageClearScore, ScoreType.StageClear);
         PickupFeed.Show("STAGE " + (current + 1) + " CLEARED  +" + stageClearScore);
 
+        AudioManager.StageClear();
+
         yield return new WaitForSeconds(nextStageDelay);
 
         int next = current + 1;

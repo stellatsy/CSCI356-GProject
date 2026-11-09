@@ -18,18 +18,28 @@ public class Shooting : MonoBehaviour
 
     WeaponItem current;
     float nextFire;
+    float nextEmptyClick;
     bool reloading;
     Coroutine reloadRoutine;
+    AudioSource shotSource, reloadSource;
 
     public WeaponItem Current => current;
     public bool Reloading => reloading;
     public int CurrentAmmo => current != null && ammo.TryGetValue(current, out var a) ? a : 0;
     public int Reserve => current != null && reserve.TryGetValue(current, out var r) ? r : 0;
+    bool CanReload => current != null && (current.unlimitedReserve || Reserve > 0);
 
     void Awake()
     {
         if (cam == null) cam = GetComponentInChildren<Camera>();
         if (hotbarUI == null) hotbarUI = FindFirstObjectByType<HotbarUI>();
+
+        shotSource = gameObject.AddComponent<AudioSource>();
+        shotSource.playOnAwake = false;
+        shotSource.spatialBlend = 0f;
+        reloadSource = gameObject.AddComponent<AudioSource>();
+        reloadSource.playOnAwake = false;
+        reloadSource.spatialBlend = 0f;
     }
 
     void Update()
@@ -50,6 +60,7 @@ public class Shooting : MonoBehaviour
     void SwitchTo(WeaponItem w)
     {
         if (reloadRoutine != null) StopCoroutine(reloadRoutine);
+        reloadSource.Stop();
         reloading = false;
         current = w;
         if (w == null) return;
@@ -59,10 +70,16 @@ public class Shooting : MonoBehaviour
     void TryFire()
     {
         if (reloading || Time.time < nextFire) return;
-        if (CurrentAmmo <= 0) { TryReload(); return; }
+        if (CurrentAmmo <= 0)
+        {
+            if (!CanReload) PlayEmptyClick();   // nothing left to reload: click
+            else TryReload();
+            return;
+        }
 
         nextFire = Time.time + 1f / current.fireRate;
         ammo[current]--;
+        if (current.shotClip != null) shotSource.PlayOneShot(current.shotClip, current.shotVolume);
 
         if (autoReload && ammo[current] <= 0) StartCoroutine(AutoReloadAfterShot());
 
@@ -78,6 +95,13 @@ public class Shooting : MonoBehaviour
         }
     }
 
+    void PlayEmptyClick()
+    {
+        if (Time.time < nextEmptyClick) return;
+        nextEmptyClick = Time.time + 0.3f;
+        if (current.emptyClip != null) shotSource.PlayOneShot(current.emptyClip);
+    }
+
     void TryReload()
     {
         if (reloading || current == null) return;
@@ -89,6 +113,7 @@ public class Shooting : MonoBehaviour
     IEnumerator Reload(WeaponItem w)
     {
         reloading = true;
+        if (w.reloadClip != null) reloadSource.PlayOneShot(w.reloadClip);
         yield return new WaitForSeconds(w.reloadTime);
 
         if (w.unlimitedReserve) ammo[w] = w.magSize;

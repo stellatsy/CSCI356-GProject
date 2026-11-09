@@ -19,13 +19,20 @@ public class WeaponProgress : MonoBehaviour
     // Chests call this instead of LootInventory.Give
     public void Give(Item item)
     {
+        AudioManager.Pickup();
+
         if (item is WeaponItem w)
         {
             if (copies.ContainsKey(w))
             {
+                bool wasReady = CanUpgrade(w);
                 copies[w]++;                           // extra copy: no new slot
+
                 if (CanUpgrade(w))
+                {
+                    if (!wasReady) AudioManager.UpgradeReady();   // chime only the first time
                     PickupFeed.Show(w.itemName + " +1 copy (" + Progress(w) + "/" + copiesPerLevel + ") - ready! Press U");
+                }
                 else if (Level(w) >= maxLevel)
                     PickupFeed.Show(w.itemName + " +1 copy (max level)");
                 else
@@ -40,6 +47,7 @@ public class WeaponProgress : MonoBehaviour
     }
 
     public bool IsTracked(WeaponItem w) => copies.ContainsKey(w);
+    public bool IsMaxed(WeaponItem w) => IsTracked(w) && Level(w) >= maxLevel;
     public int Copies(WeaponItem w) => copies.TryGetValue(w, out int c) ? c : 0;
     public int Level(WeaponItem w) => levels.TryGetValue(w, out int l) ? l : 1;
     public bool CanUpgrade(WeaponItem w) =>
