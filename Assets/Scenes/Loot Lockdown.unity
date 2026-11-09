@@ -2620,10 +2620,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Player
       objectReference: {fileID: 0}
-    - target: {fileID: 5860047077804701331, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
-      propertyPath: hurtVolume
-      value: 0.4
-      objectReference: {fileID: 0}
     - target: {fileID: 6769955422951054665, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09

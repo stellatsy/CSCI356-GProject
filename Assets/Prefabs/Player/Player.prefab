@@ -354,6 +354,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::PlayerAudio
   hurtClip: {fileID: 8300000, guid: d0c26fc56096aad4d8c3cb5a04bdf183, type: 3}
   deathClip: {fileID: 8300000, guid: f3098f87e1325ea40bab5b2853afece1, type: 3}
+  hurtVolume: 0.4
+  deathVolume: 0.7
   startHealth: 100
 --- !u!1 &5213195625159590333
 GameObject:
