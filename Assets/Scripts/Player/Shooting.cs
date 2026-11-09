@@ -113,7 +113,7 @@ public class Shooting : MonoBehaviour
     IEnumerator Reload(WeaponItem w)
     {
         reloading = true;
-        if (w.reloadClip != null) reloadSource.PlayOneShot(w.reloadClip);
+        if (w.reloadClip != null) reloadSource.PlayOneShot(w.reloadClip, w.reloadVolume);
         yield return new WaitForSeconds(w.reloadTime);
 
         if (w.unlimitedReserve) ammo[w] = w.magSize;

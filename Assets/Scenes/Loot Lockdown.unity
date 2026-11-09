@@ -1143,11 +1143,20 @@ MonoBehaviour:
   pickup: {fileID: 8300000, guid: 60600953ed081bb40904a205898d2e59, type: 3}
   stageClear: {fileID: 8300000, guid: 84716f177071ddd4dac824aa1ca95278, type: 3}
   potion: {fileID: 8300000, guid: de647b792959ecb4797cd27db7c08e2d, type: 3}
-  music: {fileID: 8300000, guid: 6884e44a00cda5f4aa22ecd7b63d59e8, type: 3}
   upgrade: {fileID: 8300000, guid: 15f63f77f4d35c74fb23d3372a45b48d, type: 3}
   upgradeReady: {fileID: 8300000, guid: dc1e58611c293fb47abd403f58a37d56, type: 3}
+  stageMusic:
+  - {fileID: 8300000, guid: 6884e44a00cda5f4aa22ecd7b63d59e8, type: 3}
+  - {fileID: 0}
+  musicFadeTime: 1.5
   sfxVolume: 1
   musicVolume: 0.35
+  pickupVolume: 0.5
+  stageClearVolume: 0.4
+  chestVolume: 0.4
+  upgradeVolume: 0.6
+  upgradeReadyVolume: 0.2
+  potionVolume: 0.5
 --- !u!1001 &723565583
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -2610,6 +2619,10 @@ PrefabInstance:
     - target: {fileID: 1288314725888549635, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 5860047077804701331, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
+      propertyPath: hurtVolume
+      value: 0.4
       objectReference: {fileID: 0}
     - target: {fileID: 6769955422951054665, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
       propertyPath: m_LocalPosition.x

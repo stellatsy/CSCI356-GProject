@@ -3,6 +3,10 @@ using UnityEngine;
 public class PlayerAudio : MonoBehaviour
 {
     public AudioClip hurtClip, deathClip;
+
+    [Range(0f, 1f)] public float hurtVolume = 0.5f;
+    [Range(0f, 1f)] public float deathVolume = 0.7f;
+
     public float startHealth = 100f;     // match the player's max health
 
     Health health;
@@ -30,12 +34,12 @@ public class PlayerAudio : MonoBehaviour
 
     void Changed(float cur, float max)
     {
-        if (cur < lastHp && cur > 0f && hurtClip != null) src.PlayOneShot(hurtClip);
+        if (cur < lastHp && cur > 0f && hurtClip != null) src.PlayOneShot(hurtClip, hurtVolume);
         lastHp = cur;
     }
 
     void Died()
     {
-        if (deathClip != null) src.PlayOneShot(deathClip);
+        if (deathClip != null) src.PlayOneShot(deathClip, deathVolume);
     }
 }

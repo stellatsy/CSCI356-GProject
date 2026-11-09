@@ -15,7 +15,7 @@ MonoBehaviour:
   id: 5
   itemName: SMG
   description: 'Fast-firing close-range weapon. '
-  icon: {fileID: 21300000, guid: c2f3b60a3f020404f9b37c4c7a07be2e, type: 3}
+  icon: {fileID: 21300000, guid: ce20b4f7c88dbfc41b15beeb5c3fcb2f, type: 3}
   maxStack: 1
   model: {fileID: 2799674369727880325, guid: c35105a0e64be4142827ec3e83bcf499, type: 3}
   damage: 8
@@ -30,3 +30,4 @@ MonoBehaviour:
   reloadClip: {fileID: 8300000, guid: 6235abe7cb11729498cc9ee8f63a06d7, type: 3}
   emptyClip: {fileID: 8300000, guid: 4158f5b5f911a514282ad4d69f1983f7, type: 3}
   shotVolume: 0.3
+  reloadVolume: 0.3

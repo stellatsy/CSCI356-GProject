@@ -14,4 +14,5 @@ public class WeaponItem : Item
     [Header("Audio")]
     public AudioClip shotClip, reloadClip, emptyClip;
     [Range(0f, 1f)] public float shotVolume = 1f;
+    [Range(0f, 1f)] public float reloadVolume = 1f;
 }

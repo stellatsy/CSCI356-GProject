@@ -70,6 +70,7 @@ public class StageManager : MonoBehaviour
         clearTimer = 0f;
         MovePlayer(stages[next].playerStart);
         if (gm != null) gm.SetStage(next + 1);
+        AudioManager.StageMusic(next);
         transitioning = false;
     }
 
