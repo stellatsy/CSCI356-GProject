@@ -5,12 +5,12 @@ using UnityEngine.UI;
 public class HealthBar : MonoBehaviour
 {
     public Health target;      // leave empty: finds the parent's Health, or the Player's
-    public Image fill;         // the red Image set to "Filled"
+    public Image fill;         
     public bool faceCamera = true;
     float targetFill = 1f;
 
-    public TMP_Text label;          // optional: shows "70 / 100"
-    public bool useGradient;        // optional: green -> yellow -> red
+    public TMP_Text label;          
+    public bool useGradient;        
     public Gradient colorByHealth;
 
 
