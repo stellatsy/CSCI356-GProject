@@ -1762,7 +1762,7 @@ Transform:
   m_GameObject: {fileID: 177947856}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: 83.74, y: 150.76, z: 140.79}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -5706,6 +5706,8 @@ MonoBehaviour:
     playerStart: {fileID: 1410726626}
   - root: {fileID: 1784627537}
     playerStart: {fileID: 870826595}
+  - root: {fileID: 1602983430}
+    playerStart: {fileID: 177947857}
   stageClearScore: 500
   clearHoldTime: 2.5
   nextStageDelay: 3
