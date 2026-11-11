@@ -87,7 +87,15 @@ public class SettingsMenu : MonoBehaviour
 
     void Update()
     {
-        if (!Input.GetKeyDown(KeyCode.Escape) && !Input.GetKeyDown(KeyCode.P)) return;
+        bool esc = Input.GetKeyDown(KeyCode.Escape);
+        bool p = Input.GetKeyDown(KeyCode.P);
+        if (!esc && !p) return;
+
+        #if UNITY_EDITOR
+        // In the Editor, Esc releases the cursor by itself, so only Resume or P closes the panel
+        if (IsOpen && esc) return;
+        #endif
+
         if (IsOpen) Close();
         else if (!isMainMenu && !dead && Time.timeScale != 0f) Open();
     }
