@@ -34,12 +34,12 @@ public class PlayerAudio : MonoBehaviour
 
     void Changed(float cur, float max)
     {
-        if (cur < lastHp && cur > 0f && hurtClip != null) src.PlayOneShot(hurtClip, hurtVolume);
+        if (cur < lastHp && cur > 0f && hurtClip != null) src.PlayOneShot(hurtClip, hurtVolume * GameSettings.Sfx);
         lastHp = cur;
     }
 
     void Died()
     {
-        if (deathClip != null) src.PlayOneShot(deathClip, deathVolume);
+        if (deathClip != null) src.PlayOneShot(deathClip, deathVolume * GameSettings.Sfx);
     }
 }
