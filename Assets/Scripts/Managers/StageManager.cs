@@ -14,6 +14,7 @@ public class StageManager : MonoBehaviour
     public int stageClearScore = 500;
     public float clearHoldTime = 2.5f; // must stay cleared this long (chests spawn ~1.5s after a kill)
     public float nextStageDelay = 3f;
+    public int startStage = 0;         // TESTING: 0 = normal (Stage 1). 3 = start at Stage 4. Set back to 0 before the build.
 
     int current;                       // 0 = Stage 1
     float clearTimer;
@@ -24,11 +25,27 @@ public class StageManager : MonoBehaviour
     {
         var p = GameObject.FindWithTag("Player");
         if (p != null) player = p.transform;
+
+        Debug.Log("StageManager startStage=" + startStage + " stages=" + stages.Length + " player found=" + (player != null));
+
+        if (startStage > 0 && startStage < stages.Length)
+        {
+            for (int i = 0; i < stages.Length; i++)
+                if (stages[i].root != null) stages[i].root.SetActive(i == startStage);
+            current = startStage;
+            MovePlayer(stages[startStage].playerStart);
+            var gm = GameManager.Instance;
+            if (gm != null) gm.SetStage(startStage + 1);
+            AudioManager.StageMusic(startStage);
+        }
     }
 
     void Update()
     {
         if (transitioning || current >= stages.Length) return;
+#if UNITY_EDITOR
+        if (Input.GetKeyDown(KeyCode.F10)) StartCoroutine(ClearStage());   // TEST ONLY: skip to the next stage
+#endif
         var root = stages[current].root;
         if (root == null) return;
 
