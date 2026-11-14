@@ -98,7 +98,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4131840046295052003}
+  - {fileID: 3528771145442568004}
   m_Father: {fileID: 8106312820464555903}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &365980820637439560
@@ -312,7 +312,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 1013916402019616517}
+  - {fileID: 6789710040052328729}
   m_Father: {fileID: 8106312820464555903}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1327990482150427584
@@ -456,7 +456,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 5265271669680321642}
+  - {fileID: 1442275948563679672}
   m_Father: {fileID: 8106312820464555903}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &1407848475345914646
@@ -523,7 +523,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 4193506592339683118}
+  - {fileID: 7087913729982508353}
   m_Father: {fileID: 8106312820464555903}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &2101616844760825765
@@ -1042,7 +1042,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 476935934898743109}
+  - {fileID: 6841369466330213674}
   m_Father: {fileID: 8106312820464555903}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &5544776346457613557
@@ -1734,7 +1734,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children:
-  - {fileID: 7073039269718187836}
+  - {fileID: 1419259947222917494}
   m_Father: {fileID: 8106312820464555903}
   m_LocalEulerAnglesHint: {x: 0, y: -90, z: 0}
 --- !u!1 &8256131856964068646
@@ -2682,6 +2682,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011688417450, guid: 94cbe56fc9684464494c9e07134e7731, type: 3}
   m_PrefabInstance: {fileID: 1063046130962508554}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &1074001574587794272
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 7917092983833497566}
+    m_Modifications:
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_Name
+      value: Monster_Stage3_Warrok
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+--- !u!4 &6789710040052328729 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+  m_PrefabInstance: {fileID: 1074001574587794272}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1173149936238232082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -3524,9 +3586,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6cd3818582282b479175b8cba3b1fc0, type: 3}
---- !u!4 &4193506592339683118 stripped
+--- !u!4 &7087913729982508353 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3423602874058881870, guid: c6cd3818582282b479175b8cba3b1fc0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8641303020104839457, guid: c6cd3818582282b479175b8cba3b1fc0, type: 3}
   m_PrefabInstance: {fileID: 1563101652211424352}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1692069440864153781
@@ -3710,68 +3772,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010020304130, guid: 3cf54fe7110fb624283a9c1e886cab04, type: 3}
   m_PrefabInstance: {fileID: 1718675043393395944}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &1858996385048026643
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 473711501779486186}
-    m_Modifications:
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_Name
-      value: Monster_Stage3_Warrok_01
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
---- !u!4 &5265271669680321642 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-  m_PrefabInstance: {fileID: 1858996385048026643}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1861970911517757959
 PrefabInstance:
@@ -4678,9 +4678,9 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c6cd3818582282b479175b8cba3b1fc0, type: 3}
---- !u!4 &476935934898743109 stripped
+--- !u!4 &6841369466330213674 stripped
 Transform:
-  m_CorrespondingSourceObject: {fileID: 3423602874058881870, guid: c6cd3818582282b479175b8cba3b1fc0, type: 3}
+  m_CorrespondingSourceObject: {fileID: 8641303020104839457, guid: c6cd3818582282b479175b8cba3b1fc0, type: 3}
   m_PrefabInstance: {fileID: 2962662773505072139}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &2964952213985932726
@@ -5598,68 +5598,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010096344706, guid: ffec9fe989614a74181de47ce40d9f33, type: 3}
   m_PrefabInstance: {fileID: 3630066520404640471}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &3672122885424297285
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 6293640167417166729}
-    m_Modifications:
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_Name
-      value: Monster_Stage3_Warrok_01
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
---- !u!4 &7073039269718187836 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-  m_PrefabInstance: {fileID: 3672122885424297285}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &3773228727832619349
 PrefabInstance:
@@ -6944,6 +6882,68 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000010376938618, guid: 8f9905bf996cdc74cb9766b8781e580e, type: 3}
   m_PrefabInstance: {fileID: 4785142023400848183}
   m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4858331302431394575
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 6293640167417166729}
+    m_Modifications:
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_Name
+      value: Monster_Stage3_Warrok
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+--- !u!4 &1419259947222917494 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+  m_PrefabInstance: {fileID: 4858331302431394575}
+  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &4914534290750608763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7154,6 +7154,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011688417450, guid: 94cbe56fc9684464494c9e07134e7731, type: 3}
   m_PrefabInstance: {fileID: 4955221870000820760}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &4962269313827775425
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 473711501779486186}
+    m_Modifications:
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_Name
+      value: Monster_Stage3_Warrok
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+--- !u!4 &1442275948563679672 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+  m_PrefabInstance: {fileID: 4962269313827775425}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &5011560684711268908
 PrefabInstance:
@@ -9365,68 +9427,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 4000011688417450, guid: 94cbe56fc9684464494c9e07134e7731, type: 3}
   m_PrefabInstance: {fileID: 6743727718962530019}
   m_PrefabAsset: {fileID: 0}
---- !u!1001 &6830936350568394108
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 7917092983833497566}
-    m_Modifications:
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_Name
-      value: Monster_Stage3_Warrok_02
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
---- !u!4 &1013916402019616517 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-  m_PrefabInstance: {fileID: 6830936350568394108}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6872250323119874082
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -9575,6 +9575,68 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000010376938618, guid: 8f9905bf996cdc74cb9766b8781e580e, type: 3}
   m_PrefabInstance: {fileID: 6886666997957389783}
+  m_PrefabAsset: {fileID: 0}
+--- !u!1001 &6928450863815740733
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    serializedVersion: 3
+    m_TransformParent: {fileID: 5357998932885948688}
+    m_Modifications:
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+      propertyPath: m_Name
+      value: Monster_Stage3_Warrok
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+    m_RemovedGameObjects: []
+    m_AddedGameObjects: []
+    m_AddedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+--- !u!4 &3528771145442568004 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
+  m_PrefabInstance: {fileID: 6928450863815740733}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &6965002549281553274
 PrefabInstance:
@@ -10349,68 +10411,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: 4000011310824096, guid: ef49f16d6d1e31248b48d5f57706a650, type: 3}
   m_PrefabInstance: {fileID: 7476944176918023848}
-  m_PrefabAsset: {fileID: 0}
---- !u!1001 &7604685665499514010
-PrefabInstance:
-  m_ObjectHideFlags: 0
-  serializedVersion: 2
-  m_Modification:
-    serializedVersion: 3
-    m_TransformParent: {fileID: 5357998932885948688}
-    m_Modifications:
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalPosition.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.w
-      value: 1
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalRotation.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.x
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.y
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_LocalEulerAnglesHint.z
-      value: 0
-      objectReference: {fileID: 0}
-    - target: {fileID: 8149242103690400230, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-      propertyPath: m_Name
-      value: Monster_Stage3_Warrok_02
-      objectReference: {fileID: 0}
-    m_RemovedComponents: []
-    m_RemovedGameObjects: []
-    m_AddedGameObjects: []
-    m_AddedComponents: []
-  m_SourcePrefab: {fileID: 100100000, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
---- !u!4 &4131840046295052003 stripped
-Transform:
-  m_CorrespondingSourceObject: {fileID: 5827231252490283641, guid: 703db1f75df4cf042946bc69f4fe0b82, type: 3}
-  m_PrefabInstance: {fileID: 7604685665499514010}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &7615054097483310945
 PrefabInstance:
