@@ -18,8 +18,10 @@ public class MouseLook : MonoBehaviour
 
     void Update()
     {
-        float mouseX = Input.GetAxis("Mouse X") * sensitivity;
-        float mouseY = Input.GetAxis("Mouse Y") * sensitivity;
+        if (Cursor.lockState != CursorLockMode.Locked) return;
+
+        float mouseX = Input.GetAxis("Mouse X") * sensitivity * GameSettings.Sensitivity;
+        float mouseY = Input.GetAxis("Mouse Y") * sensitivity * GameSettings.Sensitivity;
 
         player.Rotate(Vector3.up * mouseX);
 

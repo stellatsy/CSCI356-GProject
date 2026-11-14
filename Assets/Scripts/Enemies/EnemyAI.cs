@@ -114,6 +114,6 @@ public class EnemyAI : MonoBehaviour
 
     void PlaySound(AudioClip c)
     {
-        if (c != null) AudioSource.PlayClipAtPoint(c, transform.position, 1f);
+        if (c != null) AudioSource.PlayClipAtPoint(c, transform.position, GameSettings.Sfx);
     }
 }

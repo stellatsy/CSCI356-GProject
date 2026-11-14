@@ -79,7 +79,7 @@ public class Shooting : MonoBehaviour
 
         nextFire = Time.time + 1f / current.fireRate;
         ammo[current]--;
-        if (current.shotClip != null) shotSource.PlayOneShot(current.shotClip, current.shotVolume);
+        if (current.shotClip != null) shotSource.PlayOneShot(current.shotClip, current.shotVolume * GameSettings.Sfx);
 
         if (autoReload && ammo[current] <= 0) StartCoroutine(AutoReloadAfterShot());
 
@@ -99,7 +99,7 @@ public class Shooting : MonoBehaviour
     {
         if (Time.time < nextEmptyClick) return;
         nextEmptyClick = Time.time + 0.3f;
-        if (current.emptyClip != null) shotSource.PlayOneShot(current.emptyClip);
+        if (current.emptyClip != null) shotSource.PlayOneShot(current.emptyClip, GameSettings.Sfx);
     }
 
     void TryReload()
@@ -113,7 +113,7 @@ public class Shooting : MonoBehaviour
     IEnumerator Reload(WeaponItem w)
     {
         reloading = true;
-        if (w.reloadClip != null) reloadSource.PlayOneShot(w.reloadClip, w.reloadVolume);
+        if (w.reloadClip != null) reloadSource.PlayOneShot(w.reloadClip, w.reloadVolume * GameSettings.Sfx);
         yield return new WaitForSeconds(w.reloadTime);
 
         if (w.unlimitedReserve) ammo[w] = w.magSize;

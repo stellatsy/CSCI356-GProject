@@ -13,6 +13,8 @@ public class AudioManager : MonoBehaviour
     public AudioClip upgrade;
     public AudioClip upgradeReady;
 
+    public UnityEngine.Audio.AudioMixerGroup musicGroup;
+
     [Header("Music (one entry per stage: Element 0 = Stage 1)")]
     public AudioClip[] stageMusic;
     public float musicFadeTime = 1.5f;
@@ -41,6 +43,7 @@ public class AudioManager : MonoBehaviour
         sfx.spatialBlend = 0f;
 
         musicSource = gameObject.AddComponent<AudioSource>();
+        musicSource.outputAudioMixerGroup = musicGroup;
         musicSource.playOnAwake = false;
         musicSource.loop = true;
         musicSource.spatialBlend = 0f;
@@ -94,7 +97,7 @@ public class AudioManager : MonoBehaviour
     public static void Play(AudioClip clip, float volume = 1f)
     {
         if (Instance != null && clip != null)
-            Instance.sfx.PlayOneShot(clip, volume * Instance.sfxVolume);
+            Instance.sfx.PlayOneShot(clip, volume * Instance.sfxVolume * GameSettings.Sfx);
     }
 
     public static void Chest() { if (Instance != null) Play(Instance.chestOpen, Instance.chestVolume); }
