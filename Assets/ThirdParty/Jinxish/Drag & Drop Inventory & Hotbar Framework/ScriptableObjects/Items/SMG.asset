@@ -24,7 +24,7 @@ MonoBehaviour:
   automatic: 1
   magSize: 30
   unlimitedReserve: 0
-  reserveAmmo: 90
+  reserveAmmo: 150
   reloadTime: 1.5
   shotClip: {fileID: 8300000, guid: fd2e202be5d4c9443a20c2d868f5275b, type: 3}
   reloadClip: {fileID: 8300000, guid: 6235abe7cb11729498cc9ee8f63a06d7, type: 3}
