@@ -10,6 +10,7 @@ public class ChestLoot : MonoBehaviour
     public Item[] lootPool;                  // a random item is picked from here
     public int itemCount = 1;                // ordinary = 1, elite = 2
     public Item guaranteedFirst;             // the SMG: only the very first chest gives it
+    public bool guaranteeWeapon;             // elite chest: the first drop is always a weapon
     public string openParameter = "Open";    // Animator trigger name
     public float interactRange = 2.5f;
     public float giveDelay = 0.8f;           // wait for the lid to open
@@ -69,7 +70,9 @@ public class ChestLoot : MonoBehaviour
         int remaining = gaveFirst ? itemCount - 1 : itemCount;
         for (int i = 0; i < remaining && lootPool.Length > 0; i++)
         {
-            var drop = PickLoot();
+            Item drop = null;
+            if (i == 0 && guaranteeWeapon) drop = PickWeapon();
+            if (drop == null) drop = PickLoot();
             if (drop != null) WeaponProgress.Instance.Give(drop);
         }
 
@@ -93,6 +96,15 @@ public class ChestLoot : MonoBehaviour
         foreach (var item in lootPool)
             if (!(item is WeaponItem)) return item;
         return null;
+    }
+
+    Item PickWeapon()
+    {
+        var wp = WeaponProgress.Instance;
+        var options = new List<Item>();
+        foreach (var item in lootPool)
+            if (item is WeaponItem w && (wp == null || !wp.IsMaxed(w))) options.Add(item);
+        return options.Count > 0 ? options[Random.Range(0, options.Count)] : null;
     }
 
     IEnumerator Shrink()
