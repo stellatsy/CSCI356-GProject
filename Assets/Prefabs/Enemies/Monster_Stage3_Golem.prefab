@@ -280,7 +280,7 @@ MonoBehaviour:
   corpseTime: 4
   current: 0
   useAnimationEvent: 0
-  attackClip: {fileID: 8300000, guid: 08d9202766b8c284fa2119c46a36347c, type: 3}
+  attackClip: {fileID: 8300000, guid: b7f35a86cc938c648a09a43e68592a68, type: 3}
   deathClip: {fileID: 8300000, guid: 7de94dabfbb89754b99aeb72df6d5199, type: 3}
 --- !u!136 &5945239912385803287
 CapsuleCollider:
