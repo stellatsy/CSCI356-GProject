@@ -134,7 +134,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::ChestLoot
   lootPool:
   - {fileID: 11400000, guid: 3f552243211a56543b87eb4fb72b54ae, type: 2}
-  - {fileID: 11400000, guid: 9f62a9a09b9532a4a89f85e87a5cf974, type: 2}
+  - {fileID: 11400000, guid: 3a024f6f95ba5094382764b994a96582, type: 2}
+  - {fileID: 11400000, guid: efea6eaef0bc73c43b13f770bab8bc95, type: 2}
   - {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
   - {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
   itemCount: 2
