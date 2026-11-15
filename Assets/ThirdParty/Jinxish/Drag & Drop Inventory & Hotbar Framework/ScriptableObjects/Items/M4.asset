@@ -12,22 +12,22 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2e5931247a60b6b40985a940f012391f, type: 3}
   m_Name: M4
   m_EditorClassIdentifier: Assembly-CSharp::WeaponItem
-  id: 4
-  itemName: Pistol
-  description: 'Semi-auto standard sidearm. '
-  icon: {fileID: 21300000, guid: cfdb15ee74f975d4bb53c8a1442fa96f, type: 3}
+  id: 7
+  itemName: M4
+  description: Accurate select-fire carbine
+  icon: {fileID: 21300000, guid: dda01db9ae6ba854c93b08311eda8509, type: 3}
   maxStack: 1
-  model: {fileID: 3026621001849516807, guid: 8d48f827fe411754eaa10bafe2de95cd, type: 3}
-  damage: 10
-  fireRate: 3
-  range: 25
-  automatic: 0
-  magSize: 12
-  unlimitedReserve: 1
-  reserveAmmo: 90
+  model: {fileID: 6629576364998829135, guid: 76466623c5d6081458d8870d665977eb, type: 3}
+  damage: 18
+  fireRate: 10
+  range: 35
+  automatic: 1
+  magSize: 30
+  unlimitedReserve: 0
+  reserveAmmo: 150
   reloadTime: 1.2
-  shotClip: {fileID: 8300000, guid: 2390a1a3fd642db4898dbf422470d9eb, type: 3}
+  shotClip: {fileID: 8300000, guid: 2274f01ddc21f9843bc76829f7e8c2f4, type: 3}
   reloadClip: {fileID: 8300000, guid: 6235abe7cb11729498cc9ee8f63a06d7, type: 3}
   emptyClip: {fileID: 8300000, guid: 4158f5b5f911a514282ad4d69f1983f7, type: 3}
-  shotVolume: 1
+  shotVolume: 0.2
   reloadVolume: 0.3

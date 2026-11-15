@@ -17,17 +17,17 @@ MonoBehaviour:
   description: 'Fuly automatic assault rifle '
   icon: {fileID: 21300000, guid: 70a0d6ffea75b8347b434c19386a98b8, type: 3}
   maxStack: 1
-  model: {fileID: 3026621001849516807, guid: 8d48f827fe411754eaa10bafe2de95cd, type: 3}
+  model: {fileID: 1960245683281097525, guid: 567ecfe473c1fcf45afba4135b23ed72, type: 3}
   damage: 22
   fireRate: 8
   range: 60
   automatic: 1
   magSize: 30
-  unlimitedReserve: 1
+  unlimitedReserve: 0
   reserveAmmo: 120
   reloadTime: 1.2
-  shotClip: {fileID: 8300000, guid: 2274f01ddc21f9843bc76829f7e8c2f4, type: 3}
+  shotClip: {fileID: 8300000, guid: 201a2e3710a806842ae847db7987dc3e, type: 3}
   reloadClip: {fileID: 8300000, guid: 6235abe7cb11729498cc9ee8f63a06d7, type: 3}
   emptyClip: {fileID: 8300000, guid: 4158f5b5f911a514282ad4d69f1983f7, type: 3}
-  shotVolume: 1
+  shotVolume: 0.5
   reloadVolume: 0.3
