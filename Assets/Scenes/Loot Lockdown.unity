@@ -2525,7 +2525,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyReward
   scoreValue: 250
   scoreType: 1
-  chestPrefab: {fileID: 0}
+  chestPrefab: {fileID: 3685932986631756915, guid: b0dac0d587665064fbec8ab741701d1f, type: 3}
   chestDelay: 1.5
 --- !u!136 &126861104
 CapsuleCollider:
@@ -13747,7 +13747,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
   detectRange: 18
   attackRange: 1.8
-  damage: 10
+  damage: 15
   attackCooldown: 2
   hitDelay: 0.5
   corpseTime: 4
@@ -16299,6 +16299,7 @@ GameObject:
   - component: {fileID: 693475406}
   - component: {fileID: 693475408}
   - component: {fileID: 693475409}
+  - component: {fileID: 693475410}
   m_Layer: 0
   m_Name: GameManager
   m_TagString: Untagged
@@ -16442,6 +16443,21 @@ MonoBehaviour:
   upgradeVolume: 0.6
   upgradeReadyVolume: 0.2
   potionVolume: 0.5
+--- !u!114 &693475410
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 693475402}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 14f87604532dc81458f65f3a7e3284b4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PotionTester
+  potion: {fileID: 11400000, guid: 4337412996c714f4daa58e146b2eb833, type: 2}
+  amount: 1
+  key: 289
 --- !u!1 &694443137
 GameObject:
   m_ObjectHideFlags: 0
@@ -38236,7 +38252,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &1692260895
 Transform:
   m_ObjectHideFlags: 0
@@ -49353,6 +49369,14 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4639451420497672543, guid: 4513ef771cbd07a45b3ac6790230b161, type: 3}
       propertyPath: m_AnchoredPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739765919110398349, guid: 4513ef771cbd07a45b3ac6790230b161, type: 3}
+      propertyPath: m_Interactable
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4739765919110398349, guid: 4513ef771cbd07a45b3ac6790230b161, type: 3}
+      propertyPath: m_BlocksRaycasts
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 5445506386677992859, guid: 4513ef771cbd07a45b3ac6790230b161, type: 3}

@@ -26,7 +26,7 @@ public class StageManager : MonoBehaviour
         var p = GameObject.FindWithTag("Player");
         if (p != null) player = p.transform;
 
-        Debug.Log("StageManager startStage=" + startStage + " stages=" + stages.Length + " player found=" + (player != null));
+        
 
         if (startStage > 0 && startStage < stages.Length)
         {
