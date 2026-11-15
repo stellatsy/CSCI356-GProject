@@ -31277,6 +31277,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Stage4_Dragon_Nightmare_01
       objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: 0473693b8c83c4344959c902dfcdf0d7, type: 3}
+      propertyPath: scoreType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: 0473693b8c83c4344959c902dfcdf0d7, type: 3}
+      propertyPath: scoreValue
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: 0473693b8c83c4344959c902dfcdf0d7, type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 3685932986631756915, guid: b0dac0d587665064fbec8ab741701d1f, type: 3}
     - target: {fileID: 708816563350339125, guid: 0473693b8c83c4344959c902dfcdf0d7, type: 3}
       propertyPath: m_LocalPosition.x
       value: 2.95
@@ -38224,7 +38236,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &1692260895
 Transform:
   m_ObjectHideFlags: 0
@@ -38641,6 +38653,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Stage4_Dragon_Nightmare_04
       objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: a39823bc72693e347b54c9f873839f2a, type: 3}
+      propertyPath: scoreType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: a39823bc72693e347b54c9f873839f2a, type: 3}
+      propertyPath: scoreValue
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: a39823bc72693e347b54c9f873839f2a, type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 3685932986631756915, guid: b0dac0d587665064fbec8ab741701d1f, type: 3}
     - target: {fileID: 708816563350339125, guid: a39823bc72693e347b54c9f873839f2a, type: 3}
       propertyPath: m_LocalPosition.x
       value: 9.52
@@ -46283,6 +46307,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Stage4_Dragon_Nightmare_03
       objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: cad15e4624ffb0541b54385a20fede24, type: 3}
+      propertyPath: scoreType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: cad15e4624ffb0541b54385a20fede24, type: 3}
+      propertyPath: scoreValue
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: cad15e4624ffb0541b54385a20fede24, type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 3685932986631756915, guid: b0dac0d587665064fbec8ab741701d1f, type: 3}
     - target: {fileID: 708816563350339125, guid: cad15e4624ffb0541b54385a20fede24, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.86
@@ -48871,6 +48907,18 @@ PrefabInstance:
       propertyPath: m_Name
       value: Monster_Stage4_Dragon_Nightmare_02
       objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: af6ae3e3ea6e47c4483b0109dddcc7c6, type: 3}
+      propertyPath: scoreType
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: af6ae3e3ea6e47c4483b0109dddcc7c6, type: 3}
+      propertyPath: scoreValue
+      value: 250
+      objectReference: {fileID: 0}
+    - target: {fileID: 631799145429435948, guid: af6ae3e3ea6e47c4483b0109dddcc7c6, type: 3}
+      propertyPath: chestPrefab
+      value: 
+      objectReference: {fileID: 3685932986631756915, guid: b0dac0d587665064fbec8ab741701d1f, type: 3}
     - target: {fileID: 708816563350339125, guid: af6ae3e3ea6e47c4483b0109dddcc7c6, type: 3}
       propertyPath: m_LocalPosition.x
       value: 8.09
