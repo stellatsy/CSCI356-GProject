@@ -1,11 +1,14 @@
 // EnemyAI.cs - decision making
 
 using UnityEngine;
+using static UnityEngine.SpriteMask;
 
 [RequireComponent(typeof(EnemyMovement), typeof(Health))]
 public class EnemyAI : MonoBehaviour
 {
     public enum State { Idle, Chase, Attack, Dead }
+    public enum EnemyType { Ordinary, Elite, Boss }
+    public EnemyType enemyType;
 
     public float detectRange = 12f;
     public float attackRange = 1.8f;
@@ -17,6 +20,10 @@ public class EnemyAI : MonoBehaviour
 
     public bool useAnimationEvent = true;
 
+    [Header("Audio")]
+    public AudioClip walkClip;
+    [Range(0f, 1f)] public float walkVolume = 0.8f;
+    private AudioSource walkSource;
     public AudioClip attackClip, deathClip;
 
     EnemyMovement movement;
@@ -37,10 +44,22 @@ public class EnemyAI : MonoBehaviour
 
         GameObject p = GameObject.FindWithTag("Player");
         if (p != null) { player = p.transform; playerHealth = p.GetComponent<Health>(); }
+
+        walkSource = gameObject.AddComponent<AudioSource>();
+        walkSource.clip = walkClip;
+        walkSource.loop = true;
+        walkSource.playOnAwake = false;
+        walkSource.volume = walkVolume;
+        walkSource.spatialBlend = 1f; // 3D sound, so it gets louder as the boss approaches
     }
 
     void Update()
     {
+        // Walking sound: plays only while chasing, stops in every other state (including Dead)
+        bool isWalking = current == State.Chase;
+        if (isWalking && !walkSource.isPlaying) walkSource.Play();
+        else if (!isWalking && walkSource.isPlaying) walkSource.Stop();
+
         if (current == State.Dead || player == null) return;
         float dist = Vector3.Distance(transform.position, player.position);
 
@@ -91,6 +110,14 @@ public class EnemyAI : MonoBehaviour
         if (next != State.Chase) movement.Stop();
         if (next == State.Dead)
         {
+            var mgr = GetComponentInParent<StageProgressManager>();
+            if (mgr != null)
+            {
+                if (enemyType == EnemyType.Ordinary) mgr.OrdinaryKilled();
+                else if (enemyType == EnemyType.Elite) mgr.EliteKilled();
+                else if (enemyType == EnemyType.Boss) mgr.BossKilled();
+            }
+
             CancelInvoke(nameof(DealDamage));
             foreach (var c in GetComponentsInChildren<Collider>()) c.enabled = false;   // bullets and player pass through the corpse
             Trigger("Die");
