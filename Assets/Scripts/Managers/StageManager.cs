@@ -57,7 +57,10 @@ public class StageManager : MonoBehaviour
         }
         if (alive > 0) seenMonster = true;
 
-        bool cleared = seenMonster && alive == 0 && ChestLoot.Unopened.Count == 0;
+        var prog = root.GetComponentInChildren<StageProgressManager>(true);
+        bool pending = prog != null && prog.HasPendingSteps;
+
+        bool cleared = seenMonster && alive == 0 && !pending && ChestLoot.Unopened.Count == 0;
         clearTimer = cleared ? clearTimer + Time.deltaTime : 0f;
         if (clearTimer >= clearHoldTime) StartCoroutine(ClearStage());
     }
