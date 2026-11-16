@@ -8,8 +8,7 @@ public class VictoryScreen : MonoBehaviour
     public CanvasGroup panel;
     public float showDelay = 3f;
 
-    [Header("Stat texts")]
-    public TMP_Text killsText, elitesText, stagesText, bossText;
+    public TMP_Text killsText, elitesText, stagesText;
     public TMP_Text totalText;
     public RectTransform title;          
 
@@ -48,7 +47,6 @@ public class VictoryScreen : MonoBehaviour
         killsText.text = gm.Kills.ToString();
         elitesText.text = gm.EliteKills.ToString();
         stagesText.text = GameManager.TotalStages.ToString();
-        bossText.text = gm.BossKilled ? "Yes" : "No";
 
         AudioManager.StageClear();
         SetVisible(true);
@@ -115,6 +113,4 @@ public class VictoryScreen : MonoBehaviour
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
     }
 
-    [ContextMenu("Test: victory")]
-    void TestVictory() { GameManager.Instance.AddScore(5000, ScoreType.Boss); }
 }
