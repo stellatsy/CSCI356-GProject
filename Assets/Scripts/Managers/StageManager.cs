@@ -72,14 +72,14 @@ public class StageManager : MonoBehaviour
         if (gm != null) gm.AddScore(stageClearScore, ScoreType.StageClear);
         PickupFeed.Show("STAGE " + (current + 1) + " CLEARED  +" + stageClearScore);
 
-        AudioManager.StageClear();
+        bool finalStage = current + 1 >= stages.Length || stages[current + 1].root == null;
+        if (!finalStage) AudioManager.StageClear();         // Stage 4 clear plays diff audio
 
         yield return new WaitForSeconds(nextStageDelay);
 
         int next = current + 1;
         if (next >= stages.Length || stages[next].root == null)
         {
-            PickupFeed.Show("More stages coming soon...");   // placeholder until Stage 2+ exist
             yield break;
         }
 
@@ -102,4 +102,5 @@ public class StageManager : MonoBehaviour
         player.SetPositionAndRotation(target.position, target.rotation);
         if (cc != null) cc.enabled = true;
     }
+
 }

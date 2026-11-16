@@ -12,6 +12,7 @@ public class AudioManager : MonoBehaviour
     public AudioClip potion;
     public AudioClip upgrade;
     public AudioClip upgradeReady;
+    public AudioClip victory;
 
     public UnityEngine.Audio.AudioMixerGroup musicGroup;
 
@@ -30,6 +31,8 @@ public class AudioManager : MonoBehaviour
     [Range(0f, 1f)] public float upgradeReadyVolume = 0.3f;
 
     [Range(0f, 1f)] public float potionVolume = 0.5f;
+
+    [Range(0f, 1f)] public float victoryVolume = 0.6f;
 
     AudioSource sfx, musicSource;
     Coroutine musicRoutine;
@@ -106,4 +109,6 @@ public class AudioManager : MonoBehaviour
     public static void Potion() { if (Instance != null) Play(Instance.potion, Instance.potionVolume); }
     public static void Upgrade() { if (Instance != null) Play(Instance.upgrade, Instance.upgradeVolume); }
     public static void UpgradeReady() { if (Instance != null) Play(Instance.upgradeReady, Instance.upgradeReadyVolume); }
+
+    public static void Victory() { if (Instance != null) Play(Instance.victory, Instance.victoryVolume); }
 }

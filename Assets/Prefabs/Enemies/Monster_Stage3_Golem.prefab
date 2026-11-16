@@ -1437,14 +1437,17 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2111c492683ceb0468a993c7b3a4e5a3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::EnemyAI
+  enemyType: 0
   detectRange: 20
   attackRange: 2.5
-  damage: 15
+  damage: 10
   attackCooldown: 2.9
   hitDelay: 0.5
   corpseTime: 4
   current: 0
   useAnimationEvent: 0
+  walkClip: {fileID: 8300000, guid: 9e36188880674d04e83d050c6f830c71, type: 3}
+  walkVolume: 1
   attackClip: {fileID: 8300000, guid: b7f35a86cc938c648a09a43e68592a68, type: 3}
   deathClip: {fileID: 8300000, guid: 7de94dabfbb89754b99aeb72df6d5199, type: 3}
 --- !u!136 &4215575112777117490

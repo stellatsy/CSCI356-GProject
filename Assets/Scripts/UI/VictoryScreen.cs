@@ -28,7 +28,7 @@ public class VictoryScreen : MonoBehaviour
     void Check()
     {
         var gm = GameManager.Instance;
-        if (triggered || gm == null || !gm.BossKilled) return;
+        if (triggered || gm == null || gm.StagesCleared < GameManager.TotalStages) return;
         triggered = true;
         Invoke(nameof(Show), showDelay);
     }
@@ -48,7 +48,8 @@ public class VictoryScreen : MonoBehaviour
         elitesText.text = gm.EliteKills.ToString();
         stagesText.text = GameManager.TotalStages.ToString();
 
-        AudioManager.StageClear();
+        AudioManager.StageMusic(-1);   // fade the stage music out
+        AudioManager.Victory();
         SetVisible(true);
         panel.alpha = 0f;
         StartCoroutine(Sequence(gm.Score));
