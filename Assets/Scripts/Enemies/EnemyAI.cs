@@ -56,6 +56,7 @@ public class EnemyAI : MonoBehaviour
     void Update()
     {
         // Walking sound: plays only while chasing, stops in every other state (including Dead)
+        walkSource.volume = walkVolume * GameSettings.Sfx;   // follows the SFX slider live
         bool isWalking = current == State.Chase;
         if (isWalking && !walkSource.isPlaying) walkSource.Play();
         else if (!isWalking && walkSource.isPlaying) walkSource.Stop();
