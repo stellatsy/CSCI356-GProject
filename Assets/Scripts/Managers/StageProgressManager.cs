@@ -189,7 +189,7 @@ public class StageProgressManager : MonoBehaviour
 
     void StartMusic(AudioClip clip, float fadeIn)
     {
-        musicRoutine = StartCoroutine(FadeMusic(0f, musicVolume, fadeIn, false));
+        if (musicRoutine != null) StopCoroutine(musicRoutine);
         musicSource.clip = clip;
         musicSource.loop = true;
         musicSource.volume = 0f;

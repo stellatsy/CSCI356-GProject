@@ -2546,11 +2546,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 0.7803589, y: 1.0366904, z: 0.78035736}
   m_Center: {x: -0.00000031292439, y: 0.5183452, z: 0}
---- !u!1 &126861102 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 7098510572010253858, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
-  m_PrefabInstance: {fileID: 6566718762531223315}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &128490999
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -14668,11 +14663,6 @@ Transform:
   m_CorrespondingSourceObject: {fileID: 400000, guid: 488dfbbef3f8c8a4795c9ca6f8cc50eb, type: 3}
   m_PrefabInstance: {fileID: 568958911}
   m_PrefabAsset: {fileID: 0}
---- !u!1 &582734746 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 1432272838681064749, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
-  m_PrefabInstance: {fileID: 6566718762531223315}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &586534948
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -17108,7 +17098,7 @@ MonoBehaviour:
   stageClearScore: 500
   clearHoldTime: 2.5
   nextStageDelay: 3
-  startStage: 0
+  startStage: 1
 --- !u!114 &693475409
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21746,47 +21736,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 932044389}
   m_CullTransparentMesh: 1
---- !u!114 &933240897
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 965835638}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd02667e2df8414e9b0d21f0f13bae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StageProgressManager
-  steps:
-  - name: Elites Spawn
-    waitFor: 1
-    amountNeeded: 2
-    requireChestsOpened: 0
-    chestSpawnWait: 0
-    spawn:
-    - {fileID: 965835643}
-    - {fileID: 965835642}
-    - {fileID: 965835641}
-    - {fileID: 965835640}
-    alert:
-      group: {fileID: 0}
-      clip: {fileID: 0}
-      fadeIn: 0
-      hold: 0
-      fadeOut: 0
-      blinkSpeed: 0
-      blinkMinAlpha: 0
-    battleMusic: {fileID: 0}
-    musicFadeIn: 0
-    musicFadeOut: 0
-    bossesLeft: 0
-    count: 0
-    done: 0
-  alertSource: {fileID: 0}
-  musicSource: {fileID: 0}
-  musicVolume: 0.4
-  alertVolume: 0.4
 --- !u!1 &940807799
 GameObject:
   m_ObjectHideFlags: 0
@@ -22605,10 +22554,7 @@ PrefabInstance:
     m_RemovedComponents: []
     m_RemovedGameObjects: []
     m_AddedGameObjects: []
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 57238779399884449, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 933240897}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
 --- !u!1 &965835638 stripped
 GameObject:
@@ -22618,26 +22564,6 @@ GameObject:
 --- !u!4 &965835639 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 6767234306922442810, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
-  m_PrefabInstance: {fileID: 965835637}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &965835640 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2731810117555457028, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
-  m_PrefabInstance: {fileID: 965835637}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &965835641 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 8474908744190493763, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
-  m_PrefabInstance: {fileID: 965835637}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &965835642 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2883207461225477868, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
-  m_PrefabInstance: {fileID: 965835637}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &965835643 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 2467368329024890307, guid: 13a0524f596500140b8baa82aff0f080, type: 3}
   m_PrefabInstance: {fileID: 965835637}
   m_PrefabAsset: {fileID: 0}
 --- !u!1001 &967175306
@@ -40104,45 +40030,6 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 1011701610509994174, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
   m_PrefabInstance: {fileID: 6566718762531223315}
   m_PrefabAsset: {fileID: 0}
---- !u!114 &1784627540
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1784627537}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: acd02667e2df8414e9b0d21f0f13bae3, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::StageProgressManager
-  steps:
-  - name: Spawen Elites
-    waitFor: 1
-    amountNeeded: 3
-    requireChestsOpened: 0
-    chestSpawnWait: 2
-    spawn:
-    - {fileID: 126861102}
-    - {fileID: 582734746}
-    alert:
-      group: {fileID: 0}
-      clip: {fileID: 0}
-      fadeIn: 0
-      hold: 0
-      fadeOut: 0
-      blinkSpeed: 3
-      blinkMinAlpha: 0.15
-    battleMusic: {fileID: 0}
-    musicFadeIn: 1
-    musicFadeOut: 3
-    bossesLeft: 0
-    count: 0
-    done: 0
-  alertSource: {fileID: 0}
-  musicSource: {fileID: 0}
-  musicVolume: 0.7
-  alertVolume: 0.4
 --- !u!4 &1784627542 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 9190501850389438512, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
@@ -49204,7 +49091,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 3580154187447050262, guid: 07bc4ff137724fd49903195b120eabe9, type: 3}
       propertyPath: m_IsActive
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6534406865569458568, guid: 07bc4ff137724fd49903195b120eabe9, type: 3}
       propertyPath: m_LocalPosition.x
@@ -49560,6 +49447,18 @@ PrefabInstance:
     serializedVersion: 3
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 183938047216803765, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0.696
+      objectReference: {fileID: 0}
+    - target: {fileID: 183938047216803765, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.391
+      objectReference: {fileID: 0}
+    - target: {fileID: 183938047216803765, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -8.196
+      objectReference: {fileID: 0}
     - target: {fileID: 243801820039575764, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
       propertyPath: m_Speed
       value: 3
@@ -49570,7 +49469,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1011701610509994174, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
       propertyPath: m_IsActive
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 1206206216022363639, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
       propertyPath: m_Color.b
@@ -49599,6 +49498,18 @@ PrefabInstance:
     - target: {fileID: 3070798620732184382, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
       propertyPath: m_Speed
       value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630518650112070635, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: -1.131
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630518650112070635, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 5.391
+      objectReference: {fileID: 0}
+    - target: {fileID: 4630518650112070635, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: -6.355
       objectReference: {fileID: 0}
     - target: {fileID: 6998339197337565039, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
       propertyPath: m_Speed
@@ -49670,10 +49581,7 @@ PrefabInstance:
     - targetCorrespondingSourceObject: {fileID: 3958102869493401074, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
       insertIndex: -1
       addedObject: {fileID: 130596454}
-    m_AddedComponents:
-    - targetCorrespondingSourceObject: {fileID: 1011701610509994174, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
-      insertIndex: -1
-      addedObject: {fileID: 1784627540}
+    m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 80c153395f83d064ea784ac7f6c6c8b6, type: 3}
 --- !u!1001 &6622073338331042440
 PrefabInstance:
