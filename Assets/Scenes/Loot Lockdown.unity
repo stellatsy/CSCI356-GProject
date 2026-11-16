@@ -49484,10 +49484,6 @@ PrefabInstance:
       propertyPath: hotbarUI
       value: 
       objectReference: {fileID: 671831905}
-    - target: {fileID: 6276407805413194071, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
-      propertyPath: m_RenderPostProcessing
-      value: 1
-      objectReference: {fileID: 0}
     - target: {fileID: 6769955422951054665, guid: f0084790a5fa32d4e8d378c617d108e7, type: 3}
       propertyPath: m_LocalPosition.x
       value: -0.09
