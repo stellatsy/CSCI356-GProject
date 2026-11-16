@@ -48,6 +48,7 @@ public class StageProgressManager : MonoBehaviour
     public AudioSource alertSource; // 2D (Spatial Blend = 0)
     public AudioSource musicSource;     // 2D (Spatial Blend = 0), Loop ticked, Play On Awake unticked
     [Range(0f, 1f)] public float musicVolume = 0.4f;
+    [Range(0f, 1f)] public float alertVolume = 0.4f;   // lower this if the warning is still too loud
     Coroutine musicRoutine;
 
     void Awake()
@@ -107,9 +108,17 @@ public class StageProgressManager : MonoBehaviour
 
         if (playerDead) { running--; yield break; }
 
-        yield return PlayAlert(s.alert);
+        // If this step spawns the boss, switch the HUD to boss phase as the warning starts
+        bool hasBoss = false;
+        foreach (var g in s.spawn)
+        {
+            if (g == null) continue;
+            var bossAI = g.GetComponentInChildren<EnemyAI>(true);
+            if (bossAI != null && bossAI.enemyType == EnemyAI.EnemyType.Boss) hasBoss = true;
+        }
+        if (hasBoss && GameManager.Instance != null) GameManager.Instance.StartBossPhase();
 
-        if (playerDead) { running--; yield break; }
+        yield return PlayAlert(s.alert);
 
         foreach (var g in s.spawn)
             if (g != null) g.SetActive(true);
@@ -131,7 +140,7 @@ public class StageProgressManager : MonoBehaviour
     IEnumerator PlayAlert(Alert a)
     {
         if (a == null) yield break;
-        if (alertSource != null && a.clip != null) alertSource.PlayOneShot(a.clip);
+        if (alertSource != null && a.clip != null) alertSource.PlayOneShot(a.clip, alertVolume * GameSettings.Sfx);
         if (a.group == null) yield break;
 
         a.group.gameObject.SetActive(true);
@@ -180,7 +189,7 @@ public class StageProgressManager : MonoBehaviour
 
     void StartMusic(AudioClip clip, float fadeIn)
     {
-        if (musicRoutine != null) StopCoroutine(musicRoutine);
+        musicRoutine = StartCoroutine(FadeMusic(0f, musicVolume, fadeIn, false));
         musicSource.clip = clip;
         musicSource.loop = true;
         musicSource.volume = 0f;
@@ -204,8 +213,11 @@ public class StageProgressManager : MonoBehaviour
             yield return null;
         }
         musicSource.volume = to;
+        musicRoutine = null;
         if (stopAtEnd) musicSource.Stop();
     }
+
+    
 
     void OnEnable()
     {

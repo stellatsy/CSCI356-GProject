@@ -46,9 +46,11 @@ public class StageHUD : MonoBehaviour
         if (key != lastKey)
         {
             lastKey = key;
-            StopAllCoroutines();
-            string text = gm.BossPhase ? "FINAL BOSS" : $"STAGE {gm.Stage}";
-            StartCoroutine(ShowBanner(text));
+            if (!gm.BossPhase)                                   // the warning panel handles the boss intro
+            {
+                StopAllCoroutines();
+                StartCoroutine(ShowBanner($"STAGE {gm.Stage}"));
+            }
         }
     }
 
